@@ -243,20 +243,17 @@
         max-width: 1400px;
         margin: 0 auto;
       }
-      .section-title {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: clamp(3rem, 8vw, 6rem);
-        margin-bottom: 3rem;
-        letter-spacing: 0.05em;
-        background: linear-gradient(
-          135deg,
-          var(--light) 0%,
-          var(--accent) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+    .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;  /* THIS CENTERS IT */
+}
 
       .about-content {
         display: block;
@@ -1187,75 +1184,90 @@
         </div>
 
         <!-- CATEGORY 1: Brand Identity (4 logos) -->
-        <div class="work-section active" id="brand-identity-section">
-          <div class="section-header">
-            <h3>Brand Identity & Logos</h3>
-            <p>Crafting unique visual identities that capture brand essence</p>
-          </div>
-          <div class="portfolio-grid">
-            <div class="portfolio-item">
-              <img
-                src="images/Logos/Artisians Cafe/Logo 02.jpg"
-                alt="Artisians' Café Logo"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>Artisians' Café</h4>
-                  <p>Elegant circular logo design for premium café brand</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-item">
-              <img
-                src="images/Logos/Creators Box/Logo 01.jpg"
-                alt="Creators Box Logo"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>Creators Box</h4>
-                  <p>Modern 3D geometric logo representing creativity</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-item">
-              <img
-                src="images/Logos/The Third Interval/LOGO 01.jpg"
-                alt="The 3rd Interval Logo"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>The 3rd Interval</h4>
-                  <p>Contemporary logo with celestial theme</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-item">
-              <img
-                src="images/Logos/Collabrow/colla.jpeg"
-                alt="Collabrow Logo"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>Collabrow</h4>
-                  <p>Professional collaboration-focused branding</p>
-                </div>
-              </div>
-            </div>
-          </div>
+       <!-- CATEGORY 1: Brand Identity (5 logos) -->
+<div class="work-section active" id="brand-identity-section">
+  <div class="section-header">
+    <h3>Brand Identity & Logos</h3>
+    <p>Crafting unique visual identities that capture brand essence</p>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img
+        src="images/Logos/Artisians Cafe/Logo 02.jpg"
+        alt="Artisians' Café Logo"
+        class="portfolio-image"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Artisians' Café</h4>
+          <p>Elegant circular logo design for premium café brand</p>
         </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img
+        src="images/Logos/Creators Box/Logo 01.jpg"
+        alt="Creators Box Logo"
+        class="portfolio-image"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Creators Box</h4>
+          <p>Modern 3D geometric logo representing creativity</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img
+        src="images/Logos/The Third Interval/LOGO 01.jpg"
+        alt="The 3rd Interval Logo"
+        class="portfolio-image"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>The 3rd Interval</h4>
+          <p>Contemporary logo with celestial theme</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img
+        src="images/Logos/Collabrow/colla.jpeg"
+        alt="Collabrow Logo"
+        class="portfolio-image"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Collabrow</h4>
+          <p>Professional collaboration-focused branding</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img
+        src="images/Logos/brew_raga_white.jpeg"
+        alt="Fifth Logo"
+        class="portfolio-image"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Brand Name</h4>
+          <p>Logo design description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         <!-- CATEGORY 2: Architecture (2 container images) -->
         <!-- CATEGORY 2: Architecture & Space (2 subsections) -->
         <div class="work-section" id="architecture-section">
           <div class="section-header">
-            <h3>Architecture & Space Design</h3>
+            <h3>Catalogues & Portfolios</h3>
             <p>
               Innovative spatial solutions and modern architectural
               visualizations
@@ -1977,7 +1989,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany4.jpg"
+                  src="images/Social Media/Sharany/sharany_04.jpg"
                   alt="Sharany 4"
                   style="
                     width: 100%;
@@ -2008,7 +2020,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany5.jpg"
+                  src="images/Social Media/Sharany/sharany_05.jpg"
                   alt="Sharany 5"
                   style="
                     width: 100%;
@@ -2039,7 +2051,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany6.jpg"
+                  src="images/Social Media/Sharany/sharany_06.jpg"
                   alt="Sharany 6"
                   style="
                     width: 100%;
@@ -2070,7 +2082,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany7.jpg"
+                  src="images/Social Media/Sharany/sharany_07 (1).jpg"
                   alt="Sharany 7"
                   style="
                     width: 100%;
@@ -2101,7 +2113,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany8.jpg"
+                  src="images/Social Media/Sharany/sharany_08.jpg"
                   alt="Sharany 8"
                   style="
                     width: 100%;
@@ -2132,7 +2144,7 @@
                 "
               >
                 <img
-                  src="images/Social Media/Sharany/sharany9.jpg"
+                  src="images/Social Media/Sharany/sharany_10.jpeg"
                   alt="Sharany 9"
                   style="
                     width: 100%;
@@ -2145,37 +2157,6 @@
                   <div class="portfolio-info">
                     <h4>Nutrition Guide</h4>
                     <p>Instagram carousel</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="portfolio-item"
-                style="
-                  height: auto;
-                  min-height: 400px;
-                  background: rgba(255, 210, 63, 0.05);
-                  border: 2px solid rgba(255, 210, 63, 0.15);
-                  border-radius: 20px;
-                  padding: 1rem;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="images/Social Media/Sharany/sharany10.jpg"
-                  alt="Sharany 10"
-                  style="
-                    width: 100%;
-                    height: auto;
-                    max-height: 500px;
-                    object-fit: contain;
-                  "
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h4>Premium Dog Food</h4>
-                    <p>Brand campaign post</p>
                   </div>
                 </div>
               </div>
