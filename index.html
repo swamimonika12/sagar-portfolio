@@ -447,6 +447,90 @@
         transform: scale(1.1);
       }
 
+      .posters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.poster-item {
+  transition: transform 0.3s ease;
+}
+
+.poster-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .posters-grid {
+    max-width: 90%;
+    gap: 2rem;
+  }
+
+  .poster-item {
+    min-height: 350px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .promotional-posters {
+    margin-bottom: 4rem !important;
+  }
+
+  .posters-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem;
+  }
+
+  .poster-item {
+    min-height: 280px !important;
+    max-height: 400px !important;
+  }
+
+  .poster-item img {
+    max-height: 350px !important;
+  }
+
+  .subsection-title {
+    font-size: 1.8rem !important;
+  }
+
+  .subsection-title span {
+    font-size: 0.85rem !important;
+  }
+}
+</style>
+
+
+<!-- ========================================== -->
+<!-- QUICK CSS FIX (If you don't want to change HTML) -->
+<!-- Just add this to your <style> section -->
+<!-- ========================================== -->
+
+<style>
+@media (max-width: 768px) {
+  /* Target the promotional section posters grid */
+  #promotional-section [style*="grid-template-columns: repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Reduce heights on mobile */
+  #promotional-section .portfolio-item {
+    min-height: 280px !important;
+  }
+
+  #promotional-section .portfolio-item img {
+    max-height: 350px !important;
+  }
+}
+
       .portfolio-overlay {
         position: absolute;
         top: 0;
@@ -1396,6 +1480,47 @@
           padding-bottom: 3rem !important;
         }
       }
+      @media (max-width: 768px) {
+  /* Stack into single column */
+  #promotional-section > div:first-child > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Reduce container heights */
+  #promotional-section > div:first-child .portfolio-item {
+    min-height: 300px !important;
+    max-height: 450px !important;
+  }
+
+  /* Better image sizing */
+  #promotional-section > div:first-child .portfolio-item img {
+    max-height: 400px !important;
+  }
+
+  /* Smaller title */
+  #promotional-section .subsection-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* Reduce section spacing */
+  #promotional-section > div:first-child {
+    margin-bottom: 4rem !important;
+  }
+}
+
+/* Tablet size */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #promotional-section > div:first-child > div:last-child {
+    max-width: 90% !important;
+    gap: 2rem !important;
+  }
+
+  #promotional-section > div:first-child .portfolio-item {
+    min-height: 350px !important;
+  }
+}
     </style>
   </head>
   <body>
@@ -2834,102 +2959,60 @@
 
         <div class="work-section" id="promotional-section">
           <!-- SUBSECTION 1: Posters (Original 2 images) -->
-          <div style="margin-bottom: 6rem">
-            <div style="text-align: center; margin-bottom: 3rem">
+        <!-- SUBSECTION 1: Posters (Original 2 images) - MOBILE OPTIMIZED -->
+<div class="promotional-posters" style="margin-bottom: 6rem">
+  <div style="text-align: center; margin-bottom: 3rem">
+    <h4 class="subsection-title" style="color: var(--secondary)">
+      Promotional Posters
+      <span
+        style="
+          display: block;
+          font-size: 0.9rem;
+          color: rgba(247, 247, 255, 0.6);
+          font-family: 'Work Sans', sans-serif;
+          letter-spacing: 0.05em;
+          margin-top: 0.5rem;
+        "
+      >
+        Eye-catching poster designs for brands
+      </span>
+    </h4>
+  </div>
 
-                <h4 class="subsection-title" style="color: var(--secondary)">
-            <span
-              style="
-                display: block;
-                font-size: 0.9rem;
-                color: rgba(247, 247, 255, 0.6);
-                font-family: 'Work Sans', sans-serif;
-                letter-spacing: 0.05em;
-                margin-top: 0.5rem;
-              "
-            >
-              Eye-catching poster designs for brands
-            </span>
-          </h4>
+  <div class="posters-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Poster 1 -->
+    <div class="portfolio-item poster-item" style="height: auto; min-height: 400px; background: rgba(255, 107, 53, 0.03); padding: 1rem; border: 2px solid rgba(255, 107, 53, 0.15); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+      <img
+        src="images/Posters & Stickers/Zoom & Capture/12x18 Sticker 06.jpg"
+        alt="Wedding Photography Poster"
+        style="width: 100%; height: auto; max-height: 600px; object-fit: contain;"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Zoom N Capture Photography</h4>
+          <p>Wedding photography promotional poster</p>
+        </div>
+      </div>
+    </div>
 
-              
-               
-            </div>
+    <!-- Poster 2 -->
+    <div class="portfolio-item poster-item" style="height: auto; min-height: 400px; background: rgba(255, 107, 53, 0.03); padding: 1rem; border: 2px solid rgba(255, 107, 53, 0.15); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+      <img
+        src="images/Tea Stall/chai_tea_tall.jpg"
+        alt="Tea Stall Banner"
+        style="width: 100%; height: auto; max-height: 600px; object-fit: contain;"
+      />
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h4>Chhaya Tea Center</h4>
+          <p>Traditional tea stall branding and signage</p>
+        </div>
+      </div>
+    </div>
 
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 3rem;
-                max-width: 1000px;
-                margin: 0 auto;
-              "
-            >
-              <div
-                class="portfolio-item"
-                style="
-                  height: auto;
-                  min-height: 400px;
-                  background: rgba(255, 107, 53, 0.03);
-                  padding: 1rem;
-                  border: 2px solid rgba(255, 107, 53, 0.15);
-                  border-radius: 20px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="images/Posters & Stickers/Zoom & Capture/12x18 Sticker 06.jpg"
-                  alt="Wedding Photography Poster"
-                  style="
-                    width: 100%;
-                    height: auto;
-                    max-height: 600px;
-                    object-fit: contain;
-                  "
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h4>Zoom N Capture Photography</h4>
-                    <p>Wedding photography promotional poster</p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="portfolio-item"
-                style="
-                  height: auto;
-                  min-height: 400px;
-                  background: rgba(255, 107, 53, 0.03);
-                  padding: 1rem;
-                  border: 2px solid rgba(255, 107, 53, 0.15);
-                  border-radius: 20px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <img
-                  src="images/Tea Stall/chai_tea_tall.jpg"
-                  alt="Tea Stall Banner"
-                  style="
-                    width: 100%;
-                    height: auto;
-                    max-height: 600px;
-                    object-fit: contain;
-                  "
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h4>Chhaya Tea Center</h4>
-                    <p>Traditional tea stall branding and signage</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  </div>
+</div>
 
           <!-- SUBSECTION 2: Kosambh Wonder Co - UNIQUE GRID (6 images) -->
           <div style="margin-bottom: 6rem">
