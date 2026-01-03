@@ -10,8 +10,8 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-:root {
-    --primary: #ff6b35;
+      :root {
+        --primary: #ff6b35;
         --dark: #0a0e27;
         --light: #f7f7ff;
         --accent: #ffd23f;
@@ -1102,46 +1102,72 @@
           right: -20px;
         }
       }
-     #exterior-section .portfolio-item {
-  transition: all 0.4s ease;
-  aspect-ratio: 1 / 1; /* Makes both containers square */
-}
+      #exterior-section .portfolio-item {
+        transition: all 0.4s ease;
+        aspect-ratio: 1 / 1; /* Makes both containers square */
+      }
 
-#exterior-section .portfolio-item img {
-  border-radius: 10px;
-}
+      #exterior-section .portfolio-item img {
+        border-radius: 10px;
+      }
 
-#exterior-section .portfolio-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--secondary), var(--primary));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
+      #exterior-section .portfolio-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, var(--secondary), var(--primary));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+      }
 
-#exterior-section .portfolio-item:hover::before {
-  opacity: 1;
-}
+      #exterior-section .portfolio-item:hover::before {
+        opacity: 1;
+      }
 
-#exterior-section .portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0, 78, 137, 0.3);
-  border-color: var(--secondary);
-}
+      #exterior-section .portfolio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 78, 137, 0.3);
+        border-color: var(--secondary);
+      }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  #exterior-section > div {
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        #exterior-section > div {
+          grid-template-columns: 1fr !important;
+        }
+
+        #exterior-section .portfolio-item {
+          aspect-ratio: 4 / 3 !important; /* Better for mobile */
+        }
+      }
+      @media (max-width: 768px) {
+  /* Force all grids to single column */
+  #digital-content-section [style*="grid-template-columns"] {
+    display: grid !important;
     grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
   }
-  
-  #exterior-section .portfolio-item {
-    aspect-ratio: 4 / 3 !important; /* Better for mobile */
+
+  /* Reduce heights */
+  #digital-content-section .portfolio-item {
+    min-height: 280px !important;
+    max-height: 350px !important;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Better image sizing */
+  #digital-content-section .portfolio-item img {
+    max-height: 300px !important;
+  }
+
+  /* Smaller titles */
+  #digital-content-section .subsection-title {
+    font-size: 1.8rem !important;
   }
 }
     </style>
@@ -1175,7 +1201,7 @@
         <div class="about-text reveal">
           <p>
             Hello! I’m Sagar Thakur, a fine artist and graphic designer with
-            3.5+ years of experience. My background in structure sketching and
+            rich industry and agency experience. My background in structure sketching and
             painting shapes my design approach, bringing balance, clarity, and
             strong visual sense to every project.
           </p>
@@ -1516,8 +1542,6 @@
 
           <!-- SECTION 1: CLIENT TABS -->
           <div style="margin-bottom: 6rem">
-           
-
             <!-- Tabs: Wood Decor, The Select, SSVTM, Craft Kitchen, Stylish Home, Fastrack -->
             <div
               class="client-tabs-wrapper"
@@ -3245,128 +3269,139 @@
             </div>
           </div>
         </div>
-           <div class="work-section" id="exterior-section">
-      <div class="section-header">
-        <h3>Exterior Space Designs</h3>
-        <p>Architectural visualization and outdoor space planning</p>
-      </div>
+        <div class="work-section" id="exterior-section">
+          <div class="section-header">
+            <h3>Exterior Space Designs</h3>
+            <p>Architectural visualization and outdoor space planning</p>
+          </div>
 
-      <!-- 2 Images - Medium Size Side-by-Side Display -->
-      <div
-        style="
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
-          max-width: 1000px;
-          margin: 0 auto;
-        "
-      >
-        <div
-          class="portfolio-item"
-          style="
-            height: auto;
-            min-height: 350px;
-            background: rgba(0, 78, 137, 0.05);
-            border: 2px solid rgba(0, 78, 137, 0.2);
-            border-radius: 20px;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-          "
-        >
-          <img
-            src="images/Container House Design/Container Mockup.png"
-            alt="Exterior Design 1"
+          <!-- 2 Images - Medium Size Side-by-Side Display -->
+          <div
             style="
-              width: 100%;
-              height: auto;
-              max-height: 450px;
-              object-fit: contain;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 3rem;
+              max-width: 1000px;
+              margin: 0 auto;
             "
-          />
-          <div class="portfolio-overlay">
-            <div class="portfolio-info">
-              <h4>Exterior Space Design</h4>
-              <p>Modern outdoor architecture visualization</p>
+          >
+            <div
+              class="portfolio-item"
+              style="
+                height: auto;
+                min-height: 350px;
+                background: rgba(0, 78, 137, 0.05);
+                border: 2px solid rgba(0, 78, 137, 0.2);
+                border-radius: 20px;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <img
+                src="images/Container House Design/Container Mockup.png"
+                alt="Exterior Design 1"
+                style="
+                  width: 100%;
+                  height: auto;
+                  max-height: 450px;
+                  object-fit: contain;
+                "
+              />
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <h4>Exterior Space Design</h4>
+                  <p>Modern outdoor architecture visualization</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item"
+              style="
+                height: auto;
+                min-height: 350px;
+                background: rgba(0, 78, 137, 0.05);
+                border: 2px solid rgba(0, 78, 137, 0.2);
+                border-radius: 20px;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <img
+                src="images/Container House Design/Containers iddeas 001.jpg"
+                alt="Exterior Design 2"
+                style="
+                  width: 100%;
+                  height: auto;
+                  max-height: 450px;
+                  object-fit: contain;
+                "
+              />
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <h4>Outdoor Space Planning</h4>
+                  <p>Contemporary exterior design concept</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div
-          class="portfolio-item"
-          style="
-            height: auto;
-            min-height: 350px;
-            background: rgba(0, 78, 137, 0.05);
-            border: 2px solid rgba(0, 78, 137, 0.2);
-            border-radius: 20px;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-          "
-        >
-          <img
-            src="images/Container House Design/Containers iddeas 001.jpg"
-            alt="Exterior Design 2"
-            style="
-              width: 100%;
-              height: auto;
-              max-height: 450px;
-              object-fit: contain;
-            "
-          />
-          <div class="portfolio-overlay">
-            <div class="portfolio-info">
-              <h4>Outdoor Space Planning</h4>
-              <p>Contemporary exterior design concept</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
       </div>
     </section>
-<section id="contact" class="contact">
-  <h2 class="section-title reveal">Let's Create Together</h2>
-  <div class="contact-content reveal">
-    <p style="font-size: 1.2rem; color: rgba(247, 247, 255, 0.8); max-width: 700px; margin: 0 auto;">
-      Have a project in mind? I'd love to hear about it. Let's collaborate and create something extraordinary.
-    </p>
+    <section id="contact" class="contact">
+      <h2 class="section-title reveal">Let's Create Together</h2>
+      <div class="contact-content reveal">
+        <p
+          style="
+            font-size: 1.2rem;
+            color: rgba(247, 247, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto;
+          "
+        >
+          Have a project in mind? I'd love to hear about it. Let's collaborate
+          and create something extraordinary.
+        </p>
 
-    <div class="contact-info">
-      <!-- 1. Phone Number -->
-      <div class="contact-item">
-        <div class="icon">📱</div>
-        <a href="tel:+917984423759">+91 7984423759</a>
+        <div class="contact-info">
+          <!-- 1. Phone Number -->
+          <div class="contact-item">
+            <div class="icon">📱</div>
+            <a href="tel:+917984423759">+91 7984423759</a>
+          </div>
+
+          <!-- 2. Email (Center) -->
+          <div class="contact-item">
+            <div class="icon">✉</div>
+            <a href="mailto:sagar24thakur2000@gmail.com"
+              >sagar24thakur2000@gmail.com</a
+            >
+          </div>
+
+          <!-- 3. LinkedIn -->
+          <div class="contact-item">
+            <div class="icon">🔗</div>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <a href="mailto:sagar24thakur2000@gmail.com" class="cta-button"
+          >Get In Touch</a
+        >
       </div>
-      
-      <!-- 2. Email (Center) -->
-      <div class="contact-item">
-        <div class="icon">✉</div>
-        <a href="mailto:sagar24thakur2000@gmail.com">sagar24thakur2000@gmail.com</a>
-      </div>
-      
-      <!-- 3. LinkedIn -->
-      <div class="contact-item">
-        <div class="icon">🔗</div>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+    </section>
 
-    <a href="mailto:sagar24thakur2000@gmail.com" class="cta-button">Get In Touch</a>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2026 Sagar Thakur. All rights reserved.</p>
-</footer>
-
+    <footer>
+      <p>&copy; 2026 Sagar Thakur. All rights reserved.</p>
+    </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
@@ -3375,8 +3410,6 @@
         <img src="" alt="Portfolio Image" id="lightbox-img" />
       </div>
     </div>
-
- 
 
     <!-- ========================================== -->
     <!-- UPDATE CATEGORY NAVIGATION BUTTONS -->
