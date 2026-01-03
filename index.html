@@ -1145,29 +1145,257 @@
         }
       }
       @media (max-width: 768px) {
-  /* Force all grids to single column */
-  #digital-content-section [style*="grid-template-columns"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-    padding: 0 1rem !important;
-  }
+        /* Force all grids to single column */
+        #digital-content-section [style*="grid-template-columns"] {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 1.5rem !important;
+          padding: 0 1rem !important;
+        }
 
-  /* Reduce heights */
-  #digital-content-section .portfolio-item {
-    min-height: 280px !important;
-    max-height: 350px !important;
-    aspect-ratio: 1 / 1;
-  }
+        /* Reduce heights */
+        #digital-content-section .portfolio-item {
+          min-height: 280px !important;
+          max-height: 350px !important;
+          aspect-ratio: 1 / 1;
+        }
 
-  /* Better image sizing */
-  #digital-content-section .portfolio-item img {
-    max-height: 300px !important;
-  }
+        /* Better image sizing */
+        #digital-content-section .portfolio-item img {
+          max-height: 300px !important;
+        }
 
-  /* Smaller titles */
-  #digital-content-section .subsection-title {
-    font-size: 1.8rem !important;
+        /* Smaller titles */
+        #digital-content-section .subsection-title {
+          font-size: 1.8rem !important;
+        }
+      }
+
+      /* motion vieo deisgns */
+
+      /* Float animation for background */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-30px);
+        }
+      }
+
+      /* Hover effects for clickable images */
+      .clickable-image-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .clickable-image-card:hover > div:first-child {
+        opacity: 0.6;
+      }
+
+      .clickable-image-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .clickable-image-card:hover .portfolio-item > div > div:last-child {
+        opacity: 1 !important;
+      }
+
+      .clickable-image-card div > div > div:last-child {
+        opacity: 0;
+      }
+
+      .clickable-image-card:hover div > div > div:last-child {
+        opacity: 1;
+      }
+
+      /* Video unmute button hover */
+      #unmuteBtn:hover {
+        background: var(--accent);
+        transform: scale(1.1);
+      }
+
+      /* Lightbox animation */
+      .lightbox.active {
+        display: flex !important;
+        opacity: 1 !important;
+      }
+
+      .lightbox-close:hover {
+        color: var(--primary);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 992px) {
+        .motion-showcase > div > div:nth-child(3) {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+        }
+
+        .motion-showcase h2 {
+          font-size: 3rem !important;
+        }
+
+        .video-container-main {
+          order: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .motion-showcase {
+          padding: 5rem 3% !important;
+        }
+
+        #unmuteBtn {
+          width: 40px !important;
+          height: 40px !important;
+          font-size: 1.2rem !important;
+          bottom: 15px !important;
+          right: 15px !important;
+        }
+
+        .clickable-image-card h4 {
+          font-size: 1rem !important;
+        }
+      }
+      .clickable-image-card:hover .image-hover-overlay {
+        opacity: 1 !important;
+      }
+
+      .clickable-image-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .clickable-image-card:hover > div:first-child {
+        opacity: 0.6;
+      }
+
+      /* Unmute button */
+      #unmuteBtn:hover {
+        background: var(--accent);
+        transform: scale(1.1);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 992px) {
+        .motion-showcase > div > div:nth-child(3) {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .motion-showcase {
+          padding: 5rem 3% !important;
+        }
+
+        .motion-showcase h2 {
+          font-size: 3rem !important;
+        }
+
+        #unmuteBtn {
+          width: 40px !important;
+          height: 40px !important;
+          font-size: 1.2rem !important;
+        }
+      }
+
+      /* Kosambh Wonder Co Grid Hover Effects */
+      .kosambh-item {
+        transition: all 0.4s ease;
+      }
+
+      .kosambh-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 78, 137, 0.3);
+        border-color: var(--secondary);
+      }
+
+      /* SV Corporation Grid Hover Effects */
+      .sv-item {
+        transition: all 0.4s ease;
+      }
+
+      .sv-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(255, 210, 63, 0.3);
+        border-color: var(--accent);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 992px) {
+        /* Kosambh Grid - Stack on Tablet */
+        .kosambh-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          grid-template-rows: auto !important;
+          min-height: auto !important;
+        }
+
+        .kosambh-grid .portfolio-item {
+          grid-column: auto !important;
+          grid-row: auto !important;
+          min-height: 250px !important;
+        }
+
+        /* SV Grid - Stack on Tablet */
+        .sv-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          grid-template-rows: auto !important;
+          min-height: auto !important;
+        }
+
+        .sv-grid .portfolio-item {
+          grid-column: auto !important;
+          grid-row: auto !important;
+          min-height: 250px !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        /* Both grids - Single column on mobile */
+        .kosambh-grid,
+        .sv-grid {
+          grid-template-columns: 1fr !important;
+          gap: 1.5rem !important;
+          padding: 0 1rem !important;
+        }
+
+        .kosambh-grid .portfolio-item,
+        .sv-grid .portfolio-item {
+          grid-column: 1 !important;
+          grid-row: auto !important;
+          min-height: 300px !important;
+        }
+
+        #promotional-section .subsection-title {
+          font-size: 2rem !important;
+        }
+      }
+
+
+
+      .motion-showcase {
+  padding: 6rem 5% !important; /* Reduced from 8rem */
+  margin-bottom: 0 !important; /* Remove extra bottom margin */
+}
+
+/* Reduce gap before next section (The Selected Work or whatever comes after) */
+.motion-showcase + section,
+.motion-showcase + .work-section {
+  padding-top: 6rem !important; /* Reduced from default */
+  margin-top: 0 !important;
+}
+
+/* Alternative: If you want even less gap */
+.motion-showcase {
+  padding-bottom: 4rem !important; /* Even smaller bottom padding */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .motion-showcase {
+    padding: 4rem 3% !important;
+    padding-bottom: 3rem !important;
   }
 }
     </style>
@@ -1201,9 +1429,9 @@
         <div class="about-text reveal">
           <p>
             Hello! I’m Sagar Thakur, a fine artist and graphic designer with
-            rich industry and agency experience. My background in structure sketching and
-            painting shapes my design approach, bringing balance, clarity, and
-            strong visual sense to every project.
+            rich industry and agency experience. My background in structure
+            sketching and painting shapes my design approach, bringing balance,
+            clarity, and strong visual sense to every project.
           </p>
           <p>
             I work across branding and visual design using Illustrator,
@@ -2604,46 +2832,538 @@
 
         <!-- =============================================== -->
 
-        <!-- CATEGORY 3: Promotional (2 posters) -->
         <div class="work-section" id="promotional-section">
-          <div class="section-header">
-            <h3>Promotional Design</h3>
-            <p>
-              Eye-catching posters and promotional materials that drive
-              engagement
-            </p>
-          </div>
-          <div class="portfolio-grid">
-            <div class="portfolio-item">
-              <img
-                src="images/Posters & Stickers/Zoom & Capture/12x18 Sticker 06.jpg"
-                alt="Wedding Photography Poster"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>Zoom N Capture Photography</h4>
-                  <p>Wedding photography promotional poster</p>
+          
+          <!-- SUBSECTION 1: Posters (Original 2 images) -->
+          <div style="margin-bottom: 6rem">
+            <div style="text-align: center; margin-bottom: 3rem">
+              <h4
+                class="subsection-title"
+                style="
+                  color: var(--primary);
+                  position: relative;
+                  display: inline-block;
+                "
+              >
+                Promotional Posters
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.9rem;
+                    color: rgba(247, 247, 255, 0.6);
+                    font-family: 'Work Sans', sans-serif;
+                    letter-spacing: 0.05em;
+                    margin-top: 0.5rem;
+                  "
+                >
+                  Eye-catching poster designs for brands
+                </span>
+              </h4>
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+                max-width: 1000px;
+                margin: 0 auto;
+              "
+            >
+              <div
+                class="portfolio-item"
+                style="
+                  height: auto;
+                  min-height: 400px;
+                  background: rgba(255, 107, 53, 0.03);
+                  padding: 1rem;
+                  border: 2px solid rgba(255, 107, 53, 0.15);
+                  border-radius: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/Posters & Stickers/Zoom & Capture/12x18 Sticker 06.jpg"
+                  alt="Wedding Photography Poster"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-height: 600px;
+                    object-fit: contain;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Zoom N Capture Photography</h4>
+                    <p>Wedding photography promotional poster</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item"
+                style="
+                  height: auto;
+                  min-height: 400px;
+                  background: rgba(255, 107, 53, 0.03);
+                  padding: 1rem;
+                  border: 2px solid rgba(255, 107, 53, 0.15);
+                  border-radius: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/Tea Stall/chai_tea_tall.jpg"
+                  alt="Tea Stall Banner"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-height: 600px;
+                    object-fit: contain;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Chhaya Tea Center</h4>
+                    <p>Traditional tea stall branding and signage</p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="portfolio-item">
-              <img
-                src="images/Tea Stall/chai_tea_tall.jpg"
-                alt="Tea Stall Banner"
-                class="portfolio-image"
-              />
-              <div class="portfolio-overlay">
-                <div class="portfolio-info">
-                  <h4>Chhaya Tea Center</h4>
-                  <p>Traditional tea stall branding and signage</p>
+          <!-- SUBSECTION 2: Kosambh Wonder Co - UNIQUE GRID (6 images) -->
+          <div style="margin-bottom: 6rem">
+            <div style="text-align: center; margin-bottom: 3rem">
+              <h4
+                class="subsection-title"
+                style="
+                  color: var(--secondary);
+                  position: relative;
+                  display: inline-block;
+                "
+              >
+                Kosambh Wonder Co
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.9rem;
+                    color: rgba(247, 247, 255, 0.6);
+                    font-family: 'Work Sans', sans-serif;
+                    letter-spacing: 0.05em;
+                    margin-top: 0.5rem;
+                  "
+                >
+                  Stall design & promotional materials - Experience work
+                </span>
+              </h4>
+            </div>
+
+            <!-- CUSTOM GRID: 2 Large + 4 Small -->
+            <div
+              class="kosambh-grid"
+              style="
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin: 0 auto;
+                min-height: 600px;
+              "
+            >
+              <!-- Image 1 - Large (spans 2 columns, 2 rows) -->
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  grid-column: 1 / 3;
+                  grid-row: 1 / 3;
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.2);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  overflow: hidden;
+                "
+              >
+                <img
+                  src="images/kosambh/image_01.jpeg"
+                  alt="Kosambh Wonder Co 1"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Kosambh Wonder Co</h4>
+                    <p>Main stall design</p>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Image 2 - Small (top right) -->
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  grid-column: 3 / 5;
+                  grid-row: 1 / 2;
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/kosambh/image_02.jpeg"
+                  alt="Kosambh Wonder Co 2"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Detail View</h4>
+                    <p>Branding elements</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image 3 - Small (middle right) -->
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  grid-column: 3 / 4;
+                  grid-row: 2 / 3;
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/kosambh/image_03.jpeg"
+                  alt="Kosambh Wonder Co 3"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Graphics</h4>
+                    <p>Display design</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image 4 - Small (bottom right) -->
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  grid-column: 4 / 5;
+                  grid-row: 2 / 3;
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/kosambh/image_04.jpeg"
+                  alt="Kosambh Wonder Co 4"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Detail</h4>
+                    <p>Promotional materials</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Images 5 & 6 - Bottom row (full width each) -->
+            </div>
+
+            <!-- Second Row for Images 5 & 6 -->
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin: 1.5rem auto 0;
+              "
+            >
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  min-height: 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/kosambh/image_05.jpeg"
+                  alt="Kosambh Wonder Co 5"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-height: 350px;
+                    object-fit: contain;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Kosambh Wonder Co</h4>
+                    <p>Complete setup view</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item kosambh-item"
+                style="
+                  background: rgba(0, 78, 137, 0.05);
+                  border: 2px solid rgba(0, 78, 137, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  min-height: 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/kosambh/image_06.jpeg"
+                  alt="Kosambh Wonder Co 6"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-height: 350px;
+                    object-fit: contain;
+                  "
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h4>Kosambh Wonder Co</h4>
+                    <p>Brand showcase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBSECTION 3: SV Corporation - UNIQUE GRID (5 images) -->
+          <div>
+            <div style="text-align: center; margin-bottom: 3rem">
+              <h4
+                class="subsection-title"
+                style="
+                  color: var(--accent);
+                  position: relative;
+                  display: inline-block;
+                "
+              >
+                SV Corporation
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.9rem;
+                    color: rgba(247, 247, 255, 0.6);
+                    font-family: 'Work Sans', sans-serif;
+                    letter-spacing: 0.05em;
+                    margin-top: 0.5rem;
+                  "
+                >
+                  Stall design & branding - Freelance client
+                </span>
+              </h4>
+            </div>
+
+            <!-- CUSTOM GRID: 1 Large + 4 Small in Corners -->
+            <div
+              class="sv-grid"
+              style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin: 0 auto;
+                min-height: 700px;
+              "
+            >
+              <!-- Image 1 - Top Left Small -->
+              <div
+                class="portfolio-item sv-item"
+                style="
+                  grid-column: 1 / 2;
+                  grid-row: 1 / 2;
+                  background: rgba(255, 210, 63, 0.05);
+                  border: 2px solid rgba(255, 210, 63, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/SV/sv_01.jpeg"
+                  alt="SV Corporation 1"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+              </div>
+
+              <!-- Image 2 - Top Right Small -->
+              <div
+                class="portfolio-item sv-item"
+                style="
+                  grid-column: 3 / 4;
+                  grid-row: 1 / 2;
+                  background: rgba(255, 210, 63, 0.05);
+                  border: 2px solid rgba(255, 210, 63, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/SV/sv_02.jpeg"
+                  alt="SV Corporation 2"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+              </div>
+
+              <!-- Image 3 - CENTER LARGE (spans 2x2) -->
+              <div
+                class="portfolio-item sv-item"
+                style="
+                  grid-column: 2 / 3;
+                  grid-row: 1 / 3;
+                  background: rgba(255, 210, 63, 0.05);
+                  border: 2px solid rgba(255, 210, 63, 0.2);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  overflow: hidden;
+                "
+              >
+                <img
+                  src="images/SV/sv_03.jpeg"
+                  alt="SV Corporation 3"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+              </div>
+
+              <!-- Image 4 - Bottom Left Small -->
+              <div
+                class="portfolio-item sv-item"
+                style="
+                  grid-column: 1 / 2;
+                  grid-row: 2 / 3;
+                  background: rgba(255, 210, 63, 0.05);
+                  border: 2px solid rgba(255, 210, 63, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/SV/sv_04.jpeg"
+                  alt="SV Corporation 4"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
+              </div>
+
+              <!-- Image 5 - Bottom Right Small -->
+              <div
+                class="portfolio-item sv-item"
+                style="
+                  grid-column: 3 / 4;
+                  grid-row: 2 / 3;
+                  background: rgba(255, 210, 63, 0.05);
+                  border: 2px solid rgba(255, 210, 63, 0.15);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <img
+                  src="images/SV/sv_05.jpeg"
+                  alt="SV Corporation 5"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                  "
+                />
               </div>
             </div>
           </div>
         </div>
-
         <!-- CATEGORY 4: Digital Content - Social Media Only -->
         <!-- CATEGORY 4: Digital Content - Social Media Only -->
         <div class="work-section" id="digital-content-section">
@@ -3356,49 +4076,343 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="contact">
-      <h2 class="section-title reveal">Let's Create Together</h2>
-      <div class="contact-content reveal">
-        <p
+        <!-- motion graphic starts here -->
+
+    <section
+      class="motion-showcase"
+      style="
+        padding: 8rem 5%;
+        background: linear-gradient(
+          135deg,
+          rgba(10, 14, 39, 0.95) 0%,
+          rgba(15, 20, 45, 1) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Animated Background -->
+      <div style="position: absolute; inset: 0; opacity: 0.05">
+        <div
           style="
-            font-size: 1.2rem;
-            color: rgba(247, 247, 255, 0.8);
-            max-width: 700px;
-            margin: 0 auto;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--primary), transparent);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
           "
-        >
-          Have a project in mind? I'd love to hear about it. Let's collaborate
-          and create something extraordinary.
-        </p>
+        ></div>
+        <div
+          style="
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent), transparent);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+          "
+        ></div>
+      </div>
 
-        <div class="contact-info">
-          <!-- 1. Phone Number -->
-          <div class="contact-item">
-            <div class="icon">📱</div>
-            <a href="tel:+917984423759">+91 7984423759</a>
-          </div>
-
-          <!-- 2. Email (Center) -->
-          <div class="contact-item">
-            <div class="icon">✉</div>
-            <a href="mailto:sagar24thakur2000@gmail.com"
-              >sagar24thakur2000@gmail.com</a
+      <div
+        style="
+          max-width: 1400px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        "
+      >
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 5rem">
+          <div
+            style="
+              display: inline-block;
+              padding: 0.6rem 1.8rem;
+              background: rgba(255, 107, 53, 0.15);
+              border: 1px solid rgba(255, 107, 53, 0.3);
+              border-radius: 50px;
+              margin-bottom: 1.5rem;
+            "
+          >
+            <span
+              style="
+                color: var(--primary);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                font-size: 0.85rem;
+              "
+              >✦ Photography & Storytelling ✦</span
             >
-          </div>
-
-          <!-- 3. LinkedIn -->
-          <div class="contact-item">
-            <div class="icon">🔗</div>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
           </div>
         </div>
 
-        <a href="mailto:sagar24thakur2000@gmail.com" class="cta-button"
-          >Get In Touch</a
+        <!-- MAIN LAYOUT: Video + 2 Images (FIXED) -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+          "
         >
+          <!-- LEFT: AUTOPLAY VIDEO -->
+          <div class="video-container-main">
+            <div style="position: relative">
+              <!-- Glow Effect -->
+              <div
+                style="
+                  position: absolute;
+                  inset: -3px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                  );
+                  border-radius: 25px;
+                  opacity: 0.4;
+                  filter: blur(25px);
+                  z-index: -1;
+                "
+              ></div>
+
+              <!-- Video Card -->
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.5);
+                  backdrop-filter: blur(10px);
+                  border-radius: 25px;
+                  padding: 1.2rem;
+                  border: 2px solid rgba(255, 107, 53, 0.3);
+                  overflow: hidden;
+                "
+              >
+                <!-- AUTOPLAY VIDEO -->
+                <div
+                  style="
+                    position: relative;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+                  "
+                >
+                  <video
+                    id="autoplayVideo"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    style="
+                      width: 100%;
+                      height: auto;
+                      display: block;
+                      background: #000;
+                      object-fit: contain;
+                    "
+                  >
+                    <source
+                      src="images/motion_video/motion_1.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: 2 CLICKABLE IMAGES (FIXED ASPECT RATIO) -->
+          <div style="display: flex; flex-direction: column; gap: 2rem">
+            <!-- IMAGE 1 -->
+            <div
+              class="clickable-image-card"
+              onclick="openLightbox('images/motion_video/image_001 (1).jpeg')"
+              style="
+                cursor: pointer;
+                position: relative;
+                transition: all 0.4s ease;
+              "
+            >
+              <!-- Glow -->
+              <div
+                style="
+                  position: absolute;
+                  inset: -2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--secondary),
+                    var(--primary)
+                  );
+                  border-radius: 20px;
+                  opacity: 0;
+                  filter: blur(20px);
+                  z-index: -1;
+                  transition: opacity 0.3s ease;
+                "
+              ></div>
+
+              <!-- Card -->
+              <div
+                style="
+                  background: rgba(0, 78, 137, 0.1);
+                  backdrop-filter: blur(10px);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  border: 2px solid rgba(0, 78, 137, 0.3);
+                  overflow: hidden;
+                  transition: all 0.3s ease;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="images/motion_video/image_001 (1).jpeg"
+                    alt="Motion Work 1"
+                    style="
+                      width: 100%;
+                      height: auto;
+                      display: block;
+                      object-fit: contain;
+                      border-radius: 10px;
+                    "
+                  />
+                  <!-- Hover Overlay -->
+                </div>
+              </div>
+            </div>
+
+            <!-- IMAGE 2 -->
+            <div
+              class="clickable-image-card"
+              onclick="openLightbox('images/motion_video/image_002.jpeg')"
+              style="
+                cursor: pointer;
+                position: relative;
+                transition: all 0.4s ease;
+              "
+            >
+              <!-- Glow -->
+              <div
+                style="
+                  position: absolute;
+                  inset: -2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--accent),
+                    var(--secondary)
+                  );
+                  border-radius: 20px;
+                  opacity: 0;
+                  filter: blur(20px);
+                  z-index: -1;
+                  transition: opacity 0.3s ease;
+                "
+              ></div>
+
+              <!-- Card -->
+              <div
+                style="
+                  background: rgba(255, 210, 63, 0.1);
+                  backdrop-filter: blur(10px);
+                  border-radius: 20px;
+                  padding: 1rem;
+                  border: 2px solid rgba(255, 210, 63, 0.3);
+                  overflow: hidden;
+                  transition: all 0.3s ease;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="images/motion_video/image_002.jpeg"
+                    alt="Motion Work 2"
+                    style="
+                      width: 100%;
+                      height: auto;
+                      display: block;
+                      object-fit: contain;
+                      border-radius: 10px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Lightbox -->
+    <div
+      id="motionLightbox"
+      class="lightbox"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 14, 39, 0.97);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      "
+    >
+      <div
+        class="lightbox-content"
+        style="max-width: 90%; max-height: 90vh; position: relative"
+      >
+        <span
+          class="lightbox-close"
+          onclick="closeLightbox()"
+          style="
+            position: absolute;
+            top: -60px;
+            right: 0;
+            font-size: 3rem;
+            color: var(--light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-weight: 300;
+            line-height: 1;
+            z-index: 10;
+          "
+          >&times;</span
+        >
+        <img
+          id="motionLightboxImg"
+          src=""
+          alt="Motion Work"
+          style="
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 15px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+          "
+        />
+      </div>
+    </div>
+    <!-- motion graphic start here -->
     <footer>
       <p>&copy; 2026 Sagar Thakur. All rights reserved.</p>
     </footer>
@@ -3569,4 +4583,72 @@
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   }
+
+  //   motion video settings
+  // Unmute toggle for video
+  let isMuted = true;
+  function toggleMute() {
+    const video = document.getElementById("autoplayVideo");
+    const btn = document.getElementById("unmuteBtn");
+
+    if (isMuted) {
+      video.muted = false;
+      btn.textContent = "🔊";
+      isMuted = false;
+    } else {
+      video.muted = true;
+      btn.textContent = "🔇";
+      isMuted = true;
+    }
+  }
+
+  // Open lightbox for images
+  function openLightbox(imageSrc) {
+    const lightbox = document.getElementById("motionLightbox");
+    const img = document.getElementById("motionLightboxImg");
+
+    img.src = imageSrc;
+    lightbox.style.display = "flex";
+    setTimeout(() => {
+      lightbox.style.opacity = "1";
+    }, 10);
+  }
+
+  // Close lightbox
+  function closeLightbox() {
+    const lightbox = document.getElementById("motionLightbox");
+    lightbox.style.opacity = "0";
+    setTimeout(() => {
+      lightbox.style.display = "none";
+    }, 300);
+  }
+
+  // Close on ESC key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  // Close on click outside
+  document
+    .getElementById("motionLightbox")
+    .addEventListener("click", function (e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+
+  // Ensure video autoplays
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("autoplayVideo");
+
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.log("Autoplay prevented. User interaction needed.");
+      });
+    }
+  });
 </script>
